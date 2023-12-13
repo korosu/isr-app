@@ -1,10 +1,12 @@
+import PocketBase from "pocketbase";
+
 async function RandomName() {
+  const pb = new PocketBase("https://rear-goes.pockethost.io");
   let name = "";
 
   try {
-    const response = await fetch("https://random-data-api.com/api/v2/users");
-    const data = await response.json();
-    name = data.first_name;
+    const record = await pb.collection("test").getOne("7qrentmc10e01l1");
+    name = record.field;
   } catch (error) {
     console.error("Error:", error);
   }
