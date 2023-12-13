@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import RandomName from "./randomName";
-import RevalidateButton from "./RevalidateButton";
+import RevalidateButton from "./revalidateButton";
 export default function Home() {
   return (
     <div className="max-w-md">
